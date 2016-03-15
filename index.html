@@ -1,0 +1,136 @@
+<html>
+<head>
+<script>
+
+function myFunction() {
+    var X =
+   document.getElementById("In1").value;
+
+   document.getElementById("thermometer").innerHTML = X;
+
+}
+var y;
+function Function2() {
+    var Y =
+   document.getElementById("In1").value;
+
+   /* document.getElementById("thermometer").innerHTML = y; */
+
+}
+
+
+</script>
+
+
+
+<style media="screen" type="text/css">
+
+html {
+    background:-webkit-radial-gradient(circle, #80b3ff 0%, #003d99 100%);
+    height:100%;
+    width:100%;
+}
+/* Thermometer column and text */
+ #thermometer {
+    margin:50% 0 0 50%;
+    left:-15px;
+    top:-100px;
+    width:22px;
+    height:150px;
+    display:block;
+    font:bold 14px/152px helvetica, arial, sans-serif;
+    text-indent: 40px;
+    background: -webkit-linear-gradient(top, white 90%, #db3f02 10%) ; 
+    /*background: -webkit-linear-gradient(top, #fff 100%, #db3f02 60%); */ 
+    border-radius:22px 22px 0 0;
+    border:5px solid #4a1c03;
+    border-bottom:none; 
+    position:absolute;
+    box-shadow:inset 0 0 0 4px #fff;
+    color:#4a1c03;
+
+
+
+    /* background: -webkit-linear-gradient(top, #fff 0%, #fff 0%, #db2f02 100%, #db3f02 100%); */
+}
+/* Thermometer Bulb */
+ #thermometer:before {
+    content:' ';
+    width:44px;
+    height:44px;
+    display:block;
+    position:absolute;
+    top:142px;
+    left:-16px;
+    z-index:-1;
+    
+
+    /* Place the bulb under the column */
+    background:#db3f02;
+    border-radius:44px;
+    border:5px solid #4a1c03;
+    box-shadow:inset 0 0 0 4px #fff;
+
+}
+/* This piece here connects the column with the bulb */
+ #thermometer:after {
+    content:' ';
+    width:14px;
+    height:7px;
+    display:block;
+    position:absolute;
+    top:146px;
+    left:4px;
+    background:#db3f02; 
+}
+
+/* Style of the input box */
+#In1 {
+    margin:50% 0 0 50%;
+    top:120px;
+    left:4px;
+    width: 100px;
+    height: 20px;
+    border:1px solid #4a1c03;
+    border-radius:0.2em 0.2em 0.2em 0.2em;
+    position:absolute;
+    font-size: 18px;
+    display:block;
+}
+
+/* Style of the button */
+#btn {
+    margin:50% 0 0 50%;
+    top:146px;
+    left:4px;
+    /*width: 60px;
+    height: 80px;
+    font-size: 10px;
+    text-align:centre; */
+    position:absolute; 
+    font:bold 7px/152px helvetica, arial, sans-serif;
+    
+}
+
+
+</style>
+
+<title></title>
+</head>
+<span id="thermometer"></span>    
+
+
+
+
+<body>
+
+
+    <input id="In1" type="input"></input> <br>
+    <button id="btn" type="button" onclick="myFunction()">Click</button>
+
+
+
+    </form>
+
+</body>
+</html>
