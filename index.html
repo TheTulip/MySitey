@@ -4,14 +4,111 @@
 function myFunction() {
     var X =
    document.getElementById("In1").value;
-   document.getElementById("thermometer").innerHTML = X;
+   if (X == 0) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '0px';
+	document.getElementById("test").style.top = '45px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+   }
+   
+   else if (X ==1) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '15px';
+	document.getElementById("test").style.top = '45px'; 
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   }    
+   else if (X ==2) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '30px';
+	document.getElementById("test").style.top = '30px'; 
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==3) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '45px';
+	document.getElementById("test").style.top = '15px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==4) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '60px';
+	document.getElementById("test").style.top = '0px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==5) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '75px';
+	document.getElementById("test").style.top = '-15px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==6) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '90px';
+	document.getElementById("test").style.top = '-30px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==7) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '105px';
+	document.getElementById("test").style.top = '-45px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==8) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '120px';
+	document.getElementById("test").style.top = '-60px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==9) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '135px';
+	document.getElementById("test").style.top = '-75px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   else if (X ==10) {
+	document.getElementById("thermometer").innerHTML = X ; 
+	document.getElementById("test").style.height = '150px';
+	document.getElementById("test").style.top = '-90px';
+	document.getElementById("In1").value='';
+	document.getElementById("In1").focus();
+	document.getElementById("In1").select();
+	
+   } 
+   
+   else{
+   window.alert("Your value's Shit!!!!")
+   }
 }
-var y;
-function Function2() {
-    var Y =
-   document.getElementById("In1").value;
-   /* document.getElementById("thermometer").innerHTML = y; */
-}
+
 </script>
 
 
@@ -32,17 +129,19 @@ html {
     display:block;
     font:bold 14px/152px helvetica, arial, sans-serif;
     text-indent: 40px;
-    background: -webkit-linear-gradient(top, white 90%, #db3f02 10%) ; 
+	/*background: -webkit-linear-gradient(top, white 70%, #db3f02 10%) ; */
     /*background: -webkit-linear-gradient(top, #fff 100%, #db3f02 60%); */ 
     border-radius:22px 22px 0 0;
     border:5px solid #4a1c03;
     border-bottom:none; 
     position:absolute;
+	//background-color: #db3f02;
+	//background-size: 20% auto;
     box-shadow:inset 0 0 0 4px #fff;
-    color:#4a1c03;
+    //color:#4a1c03;
     /* background: -webkit-linear-gradient(top, #fff 0%, #fff 0%, #db2f02 100%, #db3f02 100%); */
 }
-/* Thermometer Bulb */
+/* Thermometer Bulb */ 
  #thermometer:before {
     content:' ';
     width:44px;
@@ -82,6 +181,7 @@ html {
     position:absolute;
     font-size: 10px;
     display:block;
+
 }
 /* Style of the button */
 #btn {
@@ -94,6 +194,28 @@ html {
     text-align:centre; */
     position:absolute; 
     font:bold 10px helvetica, arial, sans-serif;
+}	
+	
+
+#test {
+	margin:50% 0 0 50%;
+    left:-5px;
+    top:-90px;
+    width:13px;
+    height:150px;
+	border-radius:22px 22px 0 0;
+    display:block;
+    text-indent: 40px;
+    position:absolute;
+	background-color: #db3f02;
+	//background-size: 20% auto;
+
+    color:#4a1c03;
+    /* background: -webkit-linear-gradient(top, #fff 0%, #fff 0%, #db2f02 100%, #db3f02 100%); */
+
+   
+}	
+
     
 }
 </style>
@@ -101,15 +223,16 @@ html {
 <title></title>
 </head>
 <span id="thermometer"></span>    
-
+<span id="test"></span> 
 
 
 
 <body>
 
 
-    <input id="In1" type="input"></input> <br>
+    <input id="In1" type="numer"></input> <br>
     <button id="btn" type="button" onclick="myFunction()">Click</button>
+   
 
 
 
