@@ -1,15 +1,19 @@
 <html>
 <head>
 <script>
-function myFunction() {
-    var X =
-   document.getElementById("In1").value;
+
+function showValue(newValue)
+{
+	document.getElementById("range").innerHTML=newValue;
+
+
+    var X = newValue;
+   //document.getElementById("In1").value;
    if (X == 0) {
 	document.getElementById("thermometer").innerHTML = X ; 
 	document.getElementById("test").style.height = '0px';
 	document.getElementById("test").style.top = '45px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
    }
    
    else if (X ==1) {
@@ -17,7 +21,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '15px';
 	document.getElementById("test").style.top = '45px'; 
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    }    
    else if (X ==2) {
@@ -25,7 +28,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '30px';
 	document.getElementById("test").style.top = '30px'; 
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==3) {
@@ -33,7 +35,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '45px';
 	document.getElementById("test").style.top = '15px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==4) {
@@ -41,7 +42,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '60px';
 	document.getElementById("test").style.top = '0px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==5) {
@@ -49,7 +49,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '75px';
 	document.getElementById("test").style.top = '-15px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==6) {
@@ -57,7 +56,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '90px';
 	document.getElementById("test").style.top = '-30px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==7) {
@@ -65,7 +63,6 @@ function myFunction() {
 	document.getElementById("test").style.height = '105px';
 	document.getElementById("test").style.top = '-45px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==8) {
@@ -73,15 +70,12 @@ function myFunction() {
 	document.getElementById("test").style.height = '120px';
 	document.getElementById("test").style.top = '-60px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
-	
    } 
    else if (X ==9) {
 	document.getElementById("thermometer").innerHTML = X ; 
 	document.getElementById("test").style.height = '135px';
 	document.getElementById("test").style.top = '-75px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
 	
    } 
    else if (X ==10) {
@@ -89,14 +83,15 @@ function myFunction() {
 	document.getElementById("test").style.height = '150px';
 	document.getElementById("test").style.top = '-90px';
 	document.getElementById("In1").value='';
-	document.getElementById("In1").select();
-	
    } 
    
    else{
    window.alert("Your value's Shit!!!!")
    }
 }
+
+
+
 
 </script>
 
@@ -184,13 +179,15 @@ html {
     position:absolute; 
     font:bold 10px helvetica, arial, sans-serif;
 }	
-	
 
+
+	
+/* Style the mercury */
 #test {
 	margin:50% 0 0 50%;
-    left:-6px;
+    left:-5px;
     top:-90px;
-    width:14px;
+    width:13px;
     height:150px;
 	border-radius:22px 22px 0 0;
     display:block;
@@ -204,6 +201,94 @@ html {
 
    
 }	
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 90% 0 0 40%;
+  width: 25%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #367ebd;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
 
     
 }
@@ -218,10 +303,9 @@ html {
 
 <body>
 
-
-    <input id="In1" type="numer"></input> <br>
-    <button id="btn" type="button" onclick="myFunction()">Click</button>
    
+	<input id="slider" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+	<span id="range">0</span>
 
 
 
